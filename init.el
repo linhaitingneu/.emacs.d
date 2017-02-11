@@ -328,5 +328,5 @@ c:/MinGW/mingw32/include
 ;;ice jump
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
-;;nodejs
+;;nodejs test
 (require 'nodejs-repl)
