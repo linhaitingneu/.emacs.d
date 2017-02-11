@@ -1,0 +1,1 @@
+(define-package "ecb" "20161009.112" "a code browser for Emacs"  'nil  :url "https://github.com/ecb-home/ecb" :keywords '("browser" "code" "programming" "tools" ))

@@ -1,0 +1,8 @@
+;; Object java-imports
+;; EIEIO PERSISTENT OBJECT
+(pcache-repository "java-imports"
+  :file "java-imports"
+  :object-name "java-imports"
+  :version "25.1.1/0.4"
+  :entries #s(hash-table size 65 test eql rehash-size 1.5 rehash-threshold 0.8 data (List [eieio-class-tag--pcache-entry 1483111696.4615355 nil "java.util" nil] ## [eieio-class-tag--pcache-entry 1483111729.01658 nil "" nil] ArrayList [eieio-class-tag--pcache-entry 1483111774.1221726 nil "java.util" nil] Map [eieio-class-tag--pcache-entry 1484582294.395481 nil "java.util" nil]))
+  :timestamp 1484583054.974723)

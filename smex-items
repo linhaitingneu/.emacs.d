@@ -1,0 +1,18 @@
+
+;; ----- smex-history -----
+(
+ package-list-packages
+ evil-mode
+ js2-mode
+ cd
+ 5x5
+ arp
+ dbx
+)
+
+;; ----- smex-data -----
+(
+ (package-list-packages . 5)
+ (js2-mode . 1)
+ (evil-mode . 1)
+)
