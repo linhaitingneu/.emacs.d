@@ -1,18 +1,58 @@
 
 ;; ----- smex-history -----
 (
- package-list-packages
- evil-mode
- js2-mode
- cd
- 5x5
- arp
- dbx
+ paredit-mode
+ helm-show-kill-ring
+ delete-char
+ next-file
+ semantic-mode
+ helm-gtags-mode
+ auto-complete-mode
 )
 
 ;; ----- smex-data -----
 (
- (package-list-packages . 5)
- (js2-mode . 1)
+ (package-list-packages . 24)
+ (js2-mode . 2)
  (evil-mode . 1)
+ (nodejs-repl . 1)
+ (sudoku . 1)
+ (shell . 4)
+ (term . 2)
+ (shell-command . 4)
+ (compile . 2)
+ (eshell . 10)
+ (multi-web-mode . 2)
+ (web-mode . 2)
+ (html-mode . 1)
+ (auto-complete-mode . 11)
+ (auto-complete . 2)
+ (package-autoremove . 2)
+ (ac-clang-activate . 1)
+ (global-ede-mode . 1)
+ (paredit-mode . 32)
+ (helm-mode . 7)
+ (slime . 38)
+ (slime-mode . 1)
+ (slime-repl . 1)
+ (helm-flycheck . 1)
+ (describe-mode . 1)
+ (describe-mode-local-bindings-in-mode . 2)
+ (desktop-save . 4)
+ (speedbar . 2)
+ (ido-mode . 2)
+ (tool-bar-mode . 2)
+ (goto-line . 1)
+ (graphviz-dot-mode . 2)
+ (artist-mode . 1)
+ (desktop-read . 1)
+ (customize-group . 2)
+ (package-install . 5)
+ (company-mode . 6)
+ (sr-speedbar-open . 3)
+ (helm-gtags-mode . 2)
+ (semantic-mode . 2)
+ (next-file . 1)
+ (delete-char . 1)
+ (helm-show-kill-ring . 1)
 )

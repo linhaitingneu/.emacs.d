@@ -1,18 +1,16 @@
 ;;; auto-complete-clang-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("auto-complete-clang-pkg.el" "auto-complete-clang.el")
-;;;;;;  (22631 14536 72000 0))
+;;;### (autoloads nil nil ("auto-complete-clang.el") (22699 3630
+;;;;;;  0 0))
 
 ;;;***
 
-(provide 'auto-complete-clang-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; auto-complete-clang-autoloads.el ends here
