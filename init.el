@@ -1,11 +1,6 @@
-;;global setting
-(setq package-archives 
-      '( 
-        ("elpa" . "http://tromey.com/elpa/")
-        ("melpa" . "http://melpa.milkbox.net/packages/")
-        ("gnu" . "http://elpa.gnu.org/packages/")
-        ))
-(package-initialize) ;; init elpa packages
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(package-initialize)
 
 (when (getenv "ORG_HOME")
   (let ((org-lisp-dir (expand-file-name "lisp" (getenv "ORG_HOME"))))
@@ -49,7 +44,7 @@
 	("e:/project_root/src" "e:/program/c++/algo" "e:/program/c/redis/src")))
  '(package-selected-packages
    (quote
-	(projectile ac-c-headers ac-helm company-c-headers slime json-mode helm-projectile paredit helm multi-term auto-complete-clang flycheck ac-clang web-mode ac-html ace-jump-mode js2-mode cmake-mode sr-speedbar helm-gtags java-imports web-beautify thread-dump session org mvn json javascript javap-mode java-snippets guide-key goto-chg ggtags ecb company common-lisp-snippets auto-complete adjust-parens)))
+	(plantuml-mode smex ac-slime projectile ac-c-headers ac-helm company-c-headers slime json-mode helm-projectile paredit helm multi-term auto-complete-clang flycheck ac-clang web-mode ac-html ace-jump-mode js2-mode cmake-mode sr-speedbar helm-gtags java-imports web-beautify thread-dump session org mvn json javascript javap-mode java-snippets guide-key goto-chg ggtags ecb company common-lisp-snippets auto-complete adjust-parens)))
  '(semantic-default-submodes
    (quote
 	(global-semantic-decoration-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
@@ -187,6 +182,12 @@ c:/MinGW/mingw32/include
 (add-to-list 'ac-modes 'html-mode)
 (add-to-list 'ac-modes 'web-mode)
 
+(require 'ac-slime)
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
+(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'slime-repl-mode))
+
 (defcustom ac-modes
   '(emacs-lisp-mode
     lisp-mode
@@ -294,3 +295,12 @@ c:/MinGW/mingw32/include
 (define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
 (define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
 (define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
+
+;;paredit
+(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+(add-hook 'slime-repl-mode-hook (lambda () (paredit-mode +1)))

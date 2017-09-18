@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
- paredit-mode
- helm-show-kill-ring
- delete-char
- next-file
- semantic-mode
+ slime
+ package-list-packages
  helm-gtags-mode
- auto-complete-mode
+ ggtags-mode
+ helm-show-kill-ring
+ undo-tree-mode
+ package-autoremove
 )
 
 ;; ----- smex-data -----
 (
- (package-list-packages . 24)
+ (package-list-packages . 28)
  (js2-mode . 2)
  (evil-mode . 1)
  (nodejs-repl . 1)
@@ -27,12 +27,12 @@
  (html-mode . 1)
  (auto-complete-mode . 11)
  (auto-complete . 2)
- (package-autoremove . 2)
+ (package-autoremove . 3)
  (ac-clang-activate . 1)
  (global-ede-mode . 1)
- (paredit-mode . 32)
+ (paredit-mode . 39)
  (helm-mode . 7)
- (slime . 38)
+ (slime . 104)
  (slime-mode . 1)
  (slime-repl . 1)
  (helm-flycheck . 1)
@@ -50,9 +50,11 @@
  (package-install . 5)
  (company-mode . 6)
  (sr-speedbar-open . 3)
- (helm-gtags-mode . 2)
+ (helm-gtags-mode . 3)
  (semantic-mode . 2)
  (next-file . 1)
  (delete-char . 1)
- (helm-show-kill-ring . 1)
+ (helm-show-kill-ring . 2)
+ (undo-tree-mode . 2)
+ (ggtags-mode . 1)
 )

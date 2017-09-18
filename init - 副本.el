@@ -1,6 +1,6 @@
 ;;global setting
-(setq package-archives 
-      '( 
+(setq package-archives
+      '(
         ("elpa" . "http://tromey.com/elpa/")
         ("melpa" . "http://melpa.milkbox.net/packages/")
         ("gnu" . "http://elpa.gnu.org/packages/")
@@ -84,7 +84,7 @@
 
 ;;yas
 (require 'yasnippet)
-(setq yas/prompt-functions 
+(setq yas/prompt-functions
       '(yas/dropdown-prompt yas/x-prompt yas/completing-prompt yas/ido-prompt yas/no-prompt))
 (yas/global-mode 1)
 (yas/minor-mode-on)
@@ -169,8 +169,8 @@
 (add-hook 'after-init-hook 'session-initialize);启动时初始化session
 
 ;;记录和恢复屏幕
-(load "desktop") 
-(desktop-load-default) 
+(load "desktop")
+(desktop-load-default)
 (desktop-read)
 
 (global-set-key [(f5)] 'gdb-many-windows);gdb-many-windows快捷键[F5]
